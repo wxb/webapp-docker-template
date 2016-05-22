@@ -13,7 +13,7 @@ class IndexController extends Controller {
     }
 
     public function test(){
-        echo 2; die;
+        echo 'hello I am DaoCloud'; die;
     	$this->assign('name','wangxb')
     		 ->assign('age', 22)
     		 ->assign('time', time());

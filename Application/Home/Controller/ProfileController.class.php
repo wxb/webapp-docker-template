@@ -11,7 +11,6 @@ class ProfileController extends Controller {
     }
 
     public function test(){
-        echo 2; die;
     	$this->assign('name','wangxb')
     		 ->assign('age', 22)
     		 ->assign('time', time());

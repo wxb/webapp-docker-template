@@ -22,7 +22,7 @@ function operate(){
         "start" )
             docker rm -v -f $(echo $CONTAINER_NAME)
             echo "runing image: $IMAGE_NAME"
-            docker run -d --name $(echo $CONTAINER_NAME) -p 80:80 -v $(pwd):/usr/share/nginx/html wangxb/nginxphpfpm
+            docker run -d --name $(echo $CONTAINER_NAME) -p 80:80 -v $(pwd):/usr/share/nginx/html -v $(pwd)/sites-enabled:/etc/nginx/sites-enabled wangxb/nginxphpfpm
             echo "success! container name is $CONTAINER_NAME"
             exit 0
             ;;
